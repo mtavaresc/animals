@@ -1,0 +1,9 @@
+/data/
+/.idea/
+/.vscode/
+/model/
+/target/
+**/.DS_Store
+/__pycache__/
+*.ipynb
+/VGG16*/
