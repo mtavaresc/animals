@@ -221,7 +221,7 @@ if __name__ == "__main__":
     )
     train_datagen.fit(x_train)
 
-    history = model.fit_generator(
+    history = model.fit(
         train_datagen.flow(x_train, y_train, batch_size=batch_size),
         steps_per_epoch=x_train.shape[0] // batch_size,
         epochs=epochs,
