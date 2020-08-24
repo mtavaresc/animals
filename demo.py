@@ -11,6 +11,7 @@ from translate import translate as t
 
 if __name__ == "__main__":
     train_df = create_dataframe()
+
     y = train_df["category"]
     x = train_df["filename"]
 
@@ -45,7 +46,7 @@ if __name__ == "__main__":
 
     model = load_model("model/ft.h5")
     test_images = []
-    j = 39  # change this to get different images
+    j = 20  # change this to get different images
     for i in range(10):
         path = train_df[train_df.category == i].values[j]
         a = images[train_df[train_df.filename == path[0]].index[0]]
@@ -67,7 +68,7 @@ if __name__ == "__main__":
     for pred in something:
         path = train_df[train_df.category == i].values[2]
         plt.imshow(test_images[i])
-        plt.show()
         print(f"\nActual  : {animals[i]}")
         print(f"Predict : {animals[np.where(pred.max() == pred)[0][0]]}")
+        plt.show()
         i += 1
