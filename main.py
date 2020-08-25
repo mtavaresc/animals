@@ -50,7 +50,6 @@ def create_dataframe():
 
     train_df.head()
     train_df = train_df.reset_index(drop=True)
-    train_df.to_csv("animals.csv")
     return train_df
 
 

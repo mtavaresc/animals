@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
     model = load_model("model/ft.h5")
     test_images = []
-    j = 20  # change this to get different images
+    j = 42  # change this to get different images
     for i in range(10):
         path = train_df[train_df.category == i].values[j]
         a = images[train_df[train_df.filename == path[0]].index[0]]
